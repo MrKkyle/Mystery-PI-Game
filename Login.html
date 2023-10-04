@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1" charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "Main.css">
+</head>
+<body>
+    <div class = 'background-image'>
+
+        <div class = 'modal1'>
+            <form class = 'modal-content' style = "height: auto; padding: 10px;" action = 'Authenticators/Login-authenticator.php' method = 'post'>
+            <img src = 'Media/Simple1.gif' alt = 'Avatar' class = 'avatar'>
+            
+            <div class = 'text-form'><b>Username</b></div>
+            <input type = 'text' placeholder = 'Enter Username' name = 'userName' autocomplete = 'off' required>
+            
+            <div class = 'text-form'><b>Password</b></div>
+            <input type = 'password' placeholder = 'Enter Password' name = 'passCode' required>
+            <br>
+            <button class = 'button' type = 'submit' name ='Go' value = 'submit'>Login</button>
+            <br>
+            <hr> or <hr>
+            <button class = 'button' type = 'button' onclick = "window.location.href = 'Register.html';">Register</button>
+        </div>    
+    </div>    
+</body>
+</html>

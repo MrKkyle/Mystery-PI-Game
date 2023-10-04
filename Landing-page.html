@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Main.css">
+		<title>CSC312</title>
+	</head>
+
+	<body>
+        <div class = "background-image" style = "background-image: none;">
+            <header>
+                <h1>Keyboard<span class="purple-text">Warriors</span></h1>
+            </header>
+
+
+            <div class = "main">
+                <div class = "img-main"></div>
+                <div class="image-overlay">
+                    <h2>Welcome to the Mystery PI Game</h2>
+                    <p>Are you ready to solve thrilling mysteries and uncover hidden secrets? Join our detective team and embark on an adventure that will test your wit and observation skills.</p>
+                    <a class = "cta-button" id = "start">Start Playing</a>
+                </div>
+            </div>
+            <div class = "aref" id = "aref">
+                <a class = "a" id = "leaderboard" onclick = "window.location.href = 'leaderboard.php';">Leaderboard</a>
+                <a class = "a" id = "share">Share</a>
+                <a class = "a" id = "LR" onclick = "window.location.href = 'Login.html';">Login/Register</a>
+                <a class = "a" id = "about">About Us</a>
+            </div>
+
+
+            <div class = "stage-selection" id = "stage">
+                <div class = "close" id = "close"></div>
+                <div class = "stage-text">Please select your stage</div>
+                <div class = "stage-elements Japan" onclick = "window.location.href = 'Stages/Offline/Japan/japan-main.html';">
+                    <div class = "text" style = "color: aliceblue;">Japan</div>
+                    <div class = "stage-text-bg"></div>
+                </div>
+                <div class = "stage-elements China" onclick = "window.location.href = 'Stages/Offline/China/china-main.html';">
+                    <div class = "text" style = "color: aliceblue;">China</div>
+                    <div class = "stage-text-bg"></div>
+                </div>
+                <div class = "stage-elements USA" onclick = "window.location.href = 'Stages/Offline/USA/usa-main.html';">
+                    <div class = "text" style = "color: aliceblue;">USA</div>
+                    <div class = "stage-text-bg"></div>
+                </div>
+                <div class = "stage-elements RSA" onclick = "window.location.href = 'Stages/Offline/RSA/rsa-main.html';">
+                    <div class = "text" style = "color: aliceblue;">South Africa</div>
+                    <div class = "stage-text-bg"></div>
+                </div>
+            </div>
+        </div>    
+
+        <div class = "message" id = "message">
+            <span id = "sp1" onclick = "document.getElementById('message').style.display = 'none'" class = "closer" title = "Close Modal">&times;</span>
+            Please select the Platform you would like to share your Progress on:
+
+            <div class = "facebook" onclick = "window.open('https://www.facebook.com', '_blank')"></div>
+            <div class = "twitter" onclick = "window.open('https://www.twitter.com', '_blank')"></div>
+        </div>
+
+        <div class = "slideshow-container" id = "ss" >
+            <div class = "mySlides fade">
+                <div class = "numbertext">1 / 4</div>
+                <img src = "Media/Slides/c1.jpg" style = "width:100%">
+            </div>
+            
+            <div class = "mySlides fade">
+                <div class = "numbertext">2 / 4</div>
+                <img src = "Media/Slides/jp2.jpg" style = "width:100%">
+            </div>
+            
+            <div class = "mySlides fade">
+                <div class = "numbertext">3 / 4</div>
+                <img src = "Media/Slides/sa3.jpg" style = "width:100%">
+            </div>
+
+            <div class = "mySlides fade">
+                <div class = "numbertext">4 / 4</div>
+                <img src = "Media/Slides/usa1.jpg" style = "width:100%">
+            </div>
+        </div>
+        
+	</body>
+	<script src = "Scripts/Landing-page.js"></script>
+</html>
