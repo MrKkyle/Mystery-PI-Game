@@ -27,7 +27,7 @@
         die("Connection Failed: " . $conn->connect_error);
     }
 
-    $query = "INSERT INTO `player` (Username, passCode, `Sharing-ID`, `Player-Registration`, `Player-Score`) 
+    $query = "INSERT INTO `player` (`Player-Username`, passCode, `Sharing-ID`, `Player-Registration`, `Player-Score`) 
     VALUES ('$namae', '$passCode', '$sharing_ID', b'1', '$score')";
 
     if(mysqli_query($conn, $query))

@@ -19,7 +19,7 @@ $name = $_SESSION["userName"];
 $passCode = $_SESSION["passCode"];
 
 //echo($name);
-$query = "SELECT * FROM `player` WHERE Username = '$name' AND passCode = '$passCode'";
+$query = "SELECT * FROM `player` WHERE `Player-Username` = '$name' AND passCode = '$passCode'";
 if((mysqli_query($conn, $query)) == false)
 {
     echo "
