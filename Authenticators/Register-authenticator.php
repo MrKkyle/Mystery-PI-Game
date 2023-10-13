@@ -3,6 +3,14 @@
 
     $namae = $_POST["userName"];
     $passCode = $_POST["passCode"];
+    $score = null;
+
+    /*Generate a random string */
+    $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+    // Output: 54esmdr0qf 
+    $sharing_ID = substr(str_shuffle($permitted_chars), 0, 10);
+
+
 
     $_SESSION["userName"] = $namae;
     $_SESSION["passCode"] = $passCode;
@@ -19,16 +27,15 @@
         die("Connection Failed: " . $conn->connect_error);
     }
 
-    $query = "INSERT INTO `api-credentials` (username, passCode) VALUES ('$namae', '$passCode')";
+    $query = "INSERT INTO `player` (Username, passCode, `Sharing-ID`, `Player-Registration`, `Player-Score`) 
+    VALUES ('$namae', '$passCode', '$sharing_ID', b'1', '$score')";
 
     if(mysqli_query($conn, $query))
     {
         //If Success redirect to customer area
 
-        $query = "INSERT INTO `customer` (c_Name, c_passCode, c_Money) VALUES ('$namae', '$passCode', 'R1000')";
-        mysqli_query($conn, $query);
 
-        header("Location: ../participant/partcipant.php");
+        header("Location: ../Participant/participant.php");
     }
     else
     {

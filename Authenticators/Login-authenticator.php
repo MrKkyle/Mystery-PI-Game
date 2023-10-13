@@ -23,7 +23,7 @@
 
     if($namae == 'admin')
     {
-        $query = "SELECT * FROM `api-credentials` WHERE userName = '$namae' AND passCode = '$passCode'";
+        $query = "SELECT * FROM `player` WHERE Username = '$namae' AND passCode = '$passCode'";
         if((mysqli_num_rows(mysqli_query($conn, $query)) > 0))
         {
             //If Success redirect to customer area
@@ -37,7 +37,7 @@
     }
     else 
     {
-        $query = "SELECT * FROM `api-credentials` WHERE userName = '$namae' AND passCode = '$passCode'";
+        $query = "SELECT * FROM `player` WHERE UserName = '$namae' AND passCode = '$passCode'";
         if((mysqli_num_rows(mysqli_query($conn, $query)) > 0))
         {
             //If Success redirect to customer area

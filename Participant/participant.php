@@ -19,7 +19,7 @@ $name = $_SESSION["userName"];
 $passCode = $_SESSION["passCode"];
 
 //echo($name);
-$query = "SELECT * FROM `api-credentials` WHERE userName = '$name' AND passCode = '$passCode'";
+$query = "SELECT * FROM `player` WHERE Username = '$name' AND passCode = '$passCode'";
 if((mysqli_query($conn, $query)) == false)
 {
     echo "
@@ -46,7 +46,7 @@ if((mysqli_query($conn, $query)) == false)
         <div class = "modal1">
             <div class = "d-selection" style = "display: block; opacity: 1;" id = "d-select">
                 <div class = "d-elements Easy">
-                    <div class = "text" style = "color: aliceblue;">Welcome back <?php print_r($_SESSION["userName"]);?> !</div>
+                    <div class = "text" style = "color: aliceblue;">Welcome back <?php print_r($name);?> !</div>
                     <div class = "d-text-bg"></div>
                 </div>
                 <div class = "d-elements Medium" id = "g-select">
